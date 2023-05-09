@@ -1,0 +1,281 @@
+
+# region Documantation
+# Karar Mekanizması  (if-elif-else)
+# Uygulama içerisinde karar mekanizmaları ile belirli bir şart tutması yada tutmaması durumuna göre farklı kod bloklarının çalışmasını temin eden yapıdır.
+
+# if kullanımı
+# if şart_cümlesi:
+#     kob bloğu
+# else:  ==> else şart cümlesi içermez çünkü if bloğunda verilen şart tutmama durumunu kontrol eder.
+#     kod_bloğu
+# endregion
+
+# region Example - 1
+# sayi_1 = int(input("Sayi girin: "))
+# sayi_2 = int(input("Sayi girin: "))
+#
+# if sayi_1 > sayi_2:
+#     print(f'{sayi_1} büyüktür')
+# else:
+#     print(f'{sayi_2} büyütür')
+# endregion
+
+
+# region Example - 2
+# Kullanıcıdan alınan sayı çift mi tek mi?
+# number = int(input("Please type into a number: "))
+#
+# if number % 2 == 0:
+#     print(f'{number} even..!')
+# else:
+#     print(f'{number} odd..!')
+# endregion
+
+
+# region Example - 3
+# Kullanıcıdan alınan sayı pozitif mi negatif mi nötr mü?
+# number = int(input("Sayı giriniz: "))
+#
+# if number > 0:
+#     print('Pozitif..!')
+# elif number < 0:
+#     print('Negatif..!')
+# else:
+#     print('Nötr..!')
+# endregion
+
+
+# region Example - 4
+# Kullanıcıdan mevsim bilgisini alalım alınan mevsim bilgsine göre ayları ekrana yazdıralım
+# mevsim = input("Lütfen bir mevsim giriniz: ").lower()
+# # burada kullanılan lower() python içerisinde built-in olarak bulunan bu fonksiyonu ile kullanıcıdan alınan input küçük harfe dönüştürdük
+# mesaj = ''
+# if mevsim == 'kiş':
+# 	mesaj = 'Aralık-Ocak-Şubat'
+# elif mevsim == 'ilkbahar':
+# 	mesaj = 'Mart-Nisan-Mayıs'
+# elif mevsim == 'yaz':
+# 	mesaj = 'Haziran-Temmuz-Ağustos'
+# elif mevsim == 'sonbahar':
+# 	mesaj = 'Eylül-Ekim-Kasım'
+# else:
+# 	mesaj = 'Böyle bir mevsim yok. uzaylı mısın?'
+#
+# print(mesaj)
+# endregion
+
+
+# region Example - 5
+# Aracın trafikte geçirdiği gün sayısına göre hangi servis aralığında olduğunu söyleyen uygulamayı yazınız
+# days = int(input("Aracınız kaç gündür tarifikte? "))
+#
+# if days <= 365:
+# 	print('Aracınız birinci servis yılında..!')
+# elif 365 < days <= 365 * 2:  # 365 <= days and days <= 365 * 2
+# 	print('Aracınız ikinci servis yılında..!')
+# elif 365 * 2 < days <= 365 * 3:  # 365 <= days and days <= 365 * 2
+# 	print('Aracınız üçüncü servis yılında..!')
+# endregion
+
+
+# region Example - 6
+# Kullanıcıdadn alınan araç türü ve hız bilgisine göre aracın cezalı olup olmadığını belirten uygulamayı yazınız
+# arac_turu = input('Araç türü: ')
+# hiz = int(input('Hız: '))
+#
+# if hiz > 0:
+# 	if arac_turu == 'otomobil':
+# 		if hiz >= 60:
+# 			print('Cezalısınız..!')
+# 		else:
+# 			print('Caze yok..!')
+# 	elif arac_turu == 'motorsiklet':
+# 		if hiz >= 120:
+# 			print('Cezalısınız..!')
+# 		else:
+# 			print('Caze yok..!')
+# 	elif arac_turu == 'kamyon':
+# 		if hiz >= 30:
+# 			print('Cezalısınız..!')
+# 		else:
+# 			print('Caze yok..!')
+# 	else:
+# 		print('Lütfen doğru araç türü giriniz..!')
+# else:
+# 	print("Lütfen pozitif bir hiz giriniz.")
+# endregion
+
+
+# region Example - 7
+# Linear bir doğrunun reel köklerini hesaplayalım
+from math import sqrt
+# Uyarı: Python'da aritmatiksel işlemler için kullanılan bir modül bulunmaktadır. Bu modülün adı "math". Karekök işlemi için bu modül içerisinde bulunna sqrt() fonksiyonundan faydalanacağız. Bu modülden faydalana bilmek için çalışma dosyamıza bu modülü import etmemiz gerekmektedir.
+# a = int(input("Birinci kat sayı: "))
+# b = int(input("İkinci kat sayı: "))
+# c = int(input("Üçüncü kat sayı: "))
+#
+# delta = b ** 2 - 4 * a * c
+#
+# if delta > 0:
+# 	x1 = -b - sqrt(delta) / 2 * a
+# 	x2 = -b + sqrt(delta) / 2 * a
+# 	print(f'2 real kök bulunamtadır.\nBirinci reel kök ==> {x1}\nİkinci reel kök ==> {x2}')
+# elif delta == 0:
+# 	x1 = -b - sqrt(delta) / 2 * a
+# 	print(f'1 real kök bulunamtadır.\nReel kök ==> {x1}')
+# else:
+# 	print('Reel kök bulunmamaktadır.!')
+# endregion
+
+
+# region Exampe - 8
+# Kullanıcıdan alınan 3 tane sayıyı büyüklük olarak karşılaştıralım
+# a = int(input("Sayı giriniz: "))
+# b = int(input("Sayı giriniz: "))
+# c = int(input("Sayı giriniz: "))
+#
+# if a > b and a > c:
+# 	print(f'{a} diğer sayılardan büyüktür..!')
+# elif b > a and b > c:
+# 	print(f'{b} diğer sayılardan büyüktür..!')
+# elif c > a and c > b:
+# 	print(f'{c} diğer sayılardan büyüktür..!')
+# else:
+# 	print('Sayılardan bazıları birbine eşit olabilir..!')
+# endregion
+
+
+# region Example - 9
+# Kullanıcıdan alınan vize, final, ödev notuna göre ortalama hesaplayalım ve harf notunu ekrna yazdıralım
+# vize = float(input("Vize: "))
+# final = float(input("Final: "))
+# odev = float(input("Odev: "))
+#
+# ort = vize * 0.3 + final * 0.6 + odev * 0.1
+#
+# if 90 <= ort <= 100:
+# 	print('AA')
+# elif 85 <= ort <= 89:
+# 	print('BA')
+# elif 80 <= ort <= 84:
+# 	print('BB')
+# elif 75 <= ort <= 79:
+# 	print('CB')
+# elif 70 <= ort <= 74:
+# 	print('CC')
+# elif 65 <= ort <= 69:
+# 	print('CD')
+# elif 60 <= ort <= 64:
+# 	print('DD')
+# elif 55 <= ort <= 59:
+# 	print('DC')
+# elif 50 <= ort <= 54:
+# 	print('FD')
+# else:
+# 	print('FF')
+# endregion
+
+
+# region Example - 10
+# Kullanıcıdan ad, kilo boy bilgilerini alalım ve vücut kitle indexsini bulalım
+# Formül: kilo / boy ** 2
+# 0 - 18.5 => Zayıf
+# 18.6 - 24.9 => Normal
+# 25 - 29.9 => Kilolu
+# 30 - 34.9 => Fazla Kilolu
+# 35 - 39.9 => Obez
+
+# name = input('Tam Adınız: ')  # Burak Hakan Yılmaz
+# pwd = input('Şifre: ')
+# # Kullanıcının ismi birden fazla kelime içerebilir. Bu yüzden bize gelen string ifade içerisinde bulunan boşluk karakterinden ifademizi aşağıda split ediyoruz yani parçalıyoruz. split() fonksiyonu bizden aşağıda ki kullanımında bir paramtre istedi bizde burada boşluk karakterini kullandık. split() işini bitirdikten sonra bize bir liste döndü. bu elde ettiğimiz listeyide 'name_list' isimli değişkene atadık.
+# name_lst = name.split(' ')
+# # artık name_lst listesinin index değerlerinde bulunan ifadelere istediğim gibi erişebilirim. aşağıda sıfırıncı indexte tutulan değeri print ettik.
+# # print(name_lst[0])
+# # Artık login işlemi için ihtiyaç duyulan ilk ad elimizde. Login işlemine başlayabiliriz
+# # Login işlemi
+# # Kullanıcının ilk adı ve şifresi ile login olsun
+#
+# if name_lst[0].lower() == 'burak' and pwd == '123':
+# 	kg = float(input('Kilo: '))
+# 	hg = float(input('Boyunuz: '))
+#
+# 	bmi = kg / hg ** 2
+#
+# 	if 0 <= bmi <= 18.5:
+# 		print(f'{name}, {bmi} kilo değerlendirmen zayıf..!')
+# 	elif 18.6 <= bmi <= 24.9:
+# 		print(f'{name}, {bmi} kilo değerlendirmen normal..!')
+# 	elif 25 <= bmi <= 29.9:
+# 		print(f'{name}, {bmi} kilo değerlendirmen kilolu..!')
+# 	elif 30 <= bmi <= 34.9:
+# 		print(f'{name}, {bmi} kilo değerlendirmen fazla kilolu..!')
+# 	elif 35 <= bmi <= 39.9:
+# 		print(f'{name}, {bmi} kilo değerlendirmen obez..!')
+# 	else:
+# 		print('Bilgilerinizi kontrol ediniz..!')
+# else:
+# 	print('Kullanıcı bilgileriniz hatalı..!')
+
+# endregion
+
+
+# region Example - 11
+# Kullanıcıdan ürün bilgisi alalım ve alınan ürünün hangi reyonda olduğunu söyleyelim
+# product = input('Ürün giriniz: ')
+#
+# if product == 'muz' or product == 'ananas' or product == 'elma':
+# 	print('Sebze reyonu')
+# elif product == 'notebook' or product == 'telefon' or product == 'tablet':
+# 	print('Teknoloji reyonu')
+# elif product == 'şampuan' or product == 'parfüm' or product == 'diş macunu':
+# 	print('Kozmatik reyonu')
+# else:
+# 	print('aradığınız ürün bulunmamaktadır..!')
+	
+# endregion
+
+
+# region Example - 12
+# Kullanıcıdan satn aldığı kitap sayısı allaım
+# bir kitap 5 tl
+# satın alınan kipta sayısına göre
+# 20'den az ise yüzde 5
+# 21 ile 50 arasında ise yüzde 10
+# 51 ile 75 arasında ise yüzde 15
+# 76 ile 100 arasında ise yüzde 25 indirim uygulayarak toplam tutarı ekrana yazdırınız
+# kitap_sayisi = int(input('Kitap sayısı: '))
+#
+# if 0 <= kitap_sayisi <= 20:
+# 	print(f'Alınan kitap sayısı {kitap_sayisi}\nToplam ödenecek tutar {kitap_sayisi * 5 * 0.95}')
+# elif 21 < kitap_sayisi <= 50:
+# 	print(f'Alınan kitap sayısı {kitap_sayisi}\nToplam ödenecek tutar {kitap_sayisi * 5 * 0.90}')
+# elif 51 < kitap_sayisi <= 75:
+# 	print(f'Alınan kitap sayısı {kitap_sayisi}\nToplam ödenecek tutar {kitap_sayisi * 5 * 0.85}')
+# elif 76 < kitap_sayisi <= 100:
+# 	print(f'Alınan kitap sayısı {kitap_sayisi}\nToplam ödenecek tutar {kitap_sayisi * 5 * 0.75}')
+# else:
+# 	print("Kitap sayısını doğru giriniz..!")
+# endregion
+
+
+# region Example - 13
+# Kullanıcıdan tam adını alalım
+# isim.soyisim@bilgeadam.com mail adresini oluşturalım ekrana basalım
+full_name = input('Tam Adınız: ').lower()
+name_list = full_name.split(' ')
+print(f'{name_list[0]}.{name_list[-1]}@bilgeadam.com')
+# endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
