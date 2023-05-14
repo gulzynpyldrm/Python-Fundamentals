@@ -8,9 +8,9 @@
 # Pythonda değişken tanımlarken herhangi bir tip belirtmiyoruz.
 # x = 10
 # Bir tip belirtmediğimiz için değişkenimiz anlık olarak içerisine atılan değerin tipine bürünmektedir.
-# x = "mike tyson"
+# x = "Marilyn Monreo"
 
-# first_name = "Burak Yılmaz"
+# first_name = "Zeynep Yılmaz"
 #
 # print(first_name)
 # Burada print() bulit-in fonkssiyonu aracılığı ile değişken üzerinde tutulan ifadeyi ekrana yazdırdık.
