@@ -185,7 +185,7 @@ from math import sqrt
 # 30 - 34.9 => Fazla Kilolu
 # 35 - 39.9 => Obez
 
-# name = input('Tam Adınız: ')  # Burak Hakan Yılmaz
+# name = input('Tam Adınız: ')  # Zeynep Yılmaz
 # pwd = input('Şifre: ')
 # # Kullanıcının ismi birden fazla kelime içerebilir. Bu yüzden bize gelen string ifade içerisinde bulunan boşluk karakterinden ifademizi aşağıda split ediyoruz yani parçalıyoruz. split() fonksiyonu bizden aşağıda ki kullanımında bir paramtre istedi bizde burada boşluk karakterini kullandık. split() işini bitirdikten sonra bize bir liste döndü. bu elde ettiğimiz listeyide 'name_list' isimli değişkene atadık.
 # name_lst = name.split(' ')
@@ -195,7 +195,7 @@ from math import sqrt
 # # Login işlemi
 # # Kullanıcının ilk adı ve şifresi ile login olsun
 #
-# if name_lst[0].lower() == 'burak' and pwd == '123':
+# if name_lst[0].lower() == 'zeynep' and pwd == '123':
 # 	kg = float(input('Kilo: '))
 # 	hg = float(input('Boyunuz: '))
 #
